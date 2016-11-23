@@ -16,7 +16,7 @@ public class Warrior implements WarriorInterface{
     public int health;
     public int damage;
     public String squadName;
-    public String wariorName = "Боец";
+    public String wariorName;
     
     
     
@@ -42,10 +42,12 @@ public class Warrior implements WarriorInterface{
 
     @Override
     public String toString() {
-        String str = "Имя бойца " + this.wariorName + ". Имя отряда " + this.squadName + ". Класс " + this.getClass()+"healt "+this.health;
+        String str = "Имя: " + this.wariorName + ", " + this.squadName + ", " 
+                +"здоровье "+this.health+", урон "+this.damage;
         return str;
     }
 
+   
 //    @Override
 //    protected Object clone() throws CloneNotSupportedException {
 //        return super.clone();

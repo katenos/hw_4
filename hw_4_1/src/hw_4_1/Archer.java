@@ -12,10 +12,10 @@ package hw_4_1;
 public class Archer extends Warrior {
 
     public Archer(String nameSquad, int i) {
-        this.damage = 30;
-        this.health = 100;
+        this.damage = 40;
+        this.health = 70;
         setSquadName(nameSquad);
-        this.wariorName+=" "+(i+1);
+        this.wariorName="Лучник "+(i+1);
     }
     
      public Archer(Warrior w) {

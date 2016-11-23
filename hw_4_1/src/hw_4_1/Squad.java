@@ -17,7 +17,7 @@ public class Squad implements Cloneable {
     public String name;
     public ArrayList<Warrior> squad = new ArrayList<Warrior>();
 
-    static int startSize = 4;
+    static int startSize = 2;
     private Random rand = new Random();
 
     public Squad(String name) {
@@ -51,12 +51,12 @@ public class Squad implements Cloneable {
         this.squad=newSquad;
     }
 
-    public Warrior getRandomWarrior() {
+    public int getRandomWarrior() {
         int warrior = 0;
         do {
             warrior = rand.nextInt(squad.size());
         } while ((squad.get(warrior).health <= 0));
-        return squad.get(warrior);
+        return warrior;
     }
 
     public boolean hasAliveWarriors() {
@@ -70,7 +70,7 @@ public class Squad implements Cloneable {
 
     @Override
     public String toString() {
-        String str = "Имя отряда " + this.name;
+        String str = this.name;
         return str;
     }
 

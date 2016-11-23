@@ -6,6 +6,7 @@
 package hw_4_1;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -14,20 +15,24 @@ import java.util.Date;
  */
 public class DateHelper {
 
-    Date startDate= new Date();
-    Date currentDate= new Date();
-    static final int DURATION=45;
-    SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+    private Calendar startDate = Calendar.getInstance();
+    private Calendar currentDate = Calendar.getInstance();
+    private static final int DURATION = 45;
 
     public String getFormattedStartDate() {
-        return format1.format(startDate);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm");
+        return sdf.format(startDate.getTime());
     }
 
     public void skipTime() {
-        currentDate.setTime(startDate.getTime()+DURATION);
+        currentDate.add(Calendar.MINUTE, DURATION);
     }
 
     public String getFormattedDiff() {
-        return format1.format(currentDate.getTime()-startDate.getTime());
+        Calendar distinct = Calendar.getInstance();
+        distinct.setTime(new Date(currentDate.getTime().getTime() - startDate.getTime().getTime()));
+//        String str = str;
+        return (distinct.get(Calendar.HOUR_OF_DAY) - 4) + ":" + 
+                distinct.get(Calendar.MINUTE);
     }
 }

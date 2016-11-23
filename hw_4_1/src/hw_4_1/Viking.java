@@ -15,7 +15,7 @@ public class Viking extends Warrior {
         this.damage = 30;
         this.health = 100;
         setSquadName(nameSquad);
-        this.wariorName += " " + (i + 1);
+        this.wariorName = "Викинг " + (i + 1);
 
     }
 
