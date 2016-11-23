@@ -32,7 +32,8 @@ public class DateHelper {
         Calendar distinct = Calendar.getInstance();
         distinct.setTime(new Date(currentDate.getTime().getTime() - startDate.getTime().getTime()));
 //        String str = str;
-        return (distinct.get(Calendar.HOUR_OF_DAY) - 4) + ":" + 
-                distinct.get(Calendar.MINUTE);
+        long hour=distinct.getTimeInMillis()/3600000;
+        long minutes=(distinct.getTimeInMillis()-hour*3600000)/60000;
+        return hour+" часов "+minutes+" минут";
     }
 }

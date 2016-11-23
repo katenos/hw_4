@@ -47,8 +47,7 @@ public class Battle {
             if(!ot2.hasAliveWarriors()){
                 nameWinner=ot1.toString();
                 break;
-            }
-            
+            }            
             ind1 = ot1.getRandomWarrior();
             ind2 = ot2.getRandomWarrior();
             w1= ot1.squad.get(ind1);
@@ -59,8 +58,7 @@ public class Battle {
             if(!ot1.hasAliveWarriors()){
                 nameWinner=ot2.toString();
                 break;
-            }
-            
+            }            
         }
         System.out.println("\nПобедил "+nameWinner);
         System.out.println("Общее время поединка "+d.getFormattedDiff());

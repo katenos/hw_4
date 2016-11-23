@@ -17,7 +17,7 @@ public class Squad implements Cloneable {
     public String name;
     public ArrayList<Warrior> squad = new ArrayList<Warrior>();
 
-    static int startSize = 2;
+    static int startSize = 4;
     private Random rand = new Random();
 
     public Squad(String name) {
