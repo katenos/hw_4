@@ -14,7 +14,7 @@ public class Battle {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) { //разделить подготовку к битве и саму битву
 
         DateHelper d = new DateHelper();
         
