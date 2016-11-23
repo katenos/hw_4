@@ -27,7 +27,8 @@ public class Hw_4_1 {
             System.out.println(ot2.squad.get(i).toString());            
         }
         
-        
+        DateHelper d = new DateHelper();
+        System.out.println(d.getFormattedStartDate());
         
         
 //        System.out.println("изм\n");
