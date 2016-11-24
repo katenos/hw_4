@@ -13,13 +13,10 @@ package hw_4_1;
  */
 public class Warrior implements WarriorInterface{ //если уж на то пошло, надо было сделать класс абстрактным и избавиться от интерфейса - в такой реализации от него нет толка
 
-    public int health; //почему public? любая сущность этой программы сейчас может как угодно изменить урон бойца, воскресить его из мертвых и т.д
-//  это не состыкуется со здравым смыслом и является нарушением инкапсуляции
-    public int damage;
-    public String squadName;
-    public String wariorName;
-    
-    //лишнние пустые места
+    protected int health; 
+    protected int damage;
+    protected String squadName;
+    protected String wariorName;
     
     @Override
     public int attack() {
@@ -46,11 +43,5 @@ public class Warrior implements WarriorInterface{ //если уж на то по
         String str = "Имя: " + this.wariorName + ", " + this.squadName + ", " 
                 +"здоровье "+this.health+", урон "+this.damage;
         return str;
-    }
-
-   
-//    @Override
-//    protected Object clone() throws CloneNotSupportedException {
-//        return super.clone();
-//    }
+    }   
 }

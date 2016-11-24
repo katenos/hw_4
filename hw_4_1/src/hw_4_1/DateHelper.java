@@ -31,7 +31,6 @@ public class DateHelper {
     public String getFormattedDiff() {
         Calendar distinct = Calendar.getInstance();
         distinct.setTime(new Date(currentDate.getTime().getTime() - startDate.getTime().getTime()));
-//        String str = str;
         long hour=distinct.getTimeInMillis()/3600000;
         long minutes=(distinct.getTimeInMillis()-hour*3600000)/60000;
         return hour+" часов "+minutes+" минут";
