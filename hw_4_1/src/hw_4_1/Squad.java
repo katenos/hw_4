@@ -61,7 +61,7 @@ public class Squad implements Cloneable {
         int warrior = 0;
         do {
             warrior = rand.nextInt(squad.size());
-        } while ((squad.get(warrior).isAlive()));
+        } while ((!squad.get(warrior).isAlive()));
         return warrior;
     }
 

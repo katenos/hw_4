@@ -15,14 +15,14 @@ public class Viking extends Warrior {
         this.damage = 30;
         this.health = 100;
         setSquadName(nameSquad);
-        this.wariorName = "Викинг " + (i + 1);
+        this.warriorName = "Викинг " + (i + 1);
     }
 
     public Viking(Warrior w) {
         this.damage = w.damage;
         this.health = w.health;
         this.squadName = w.squadName;
-        this.wariorName = w.wariorName;
+        this.warriorName = w.warriorName;
     }
 
 }

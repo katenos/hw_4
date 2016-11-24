@@ -15,14 +15,15 @@ public class Archer extends Warrior {
         this.damage = 40;
         this.health = 70;
         setSquadName(nameSquad);
-        this.wariorName="Лучник "+(i+1);
+        this.warriorName="Лучник "+(i+1);
     }
     
      public Archer(Warrior w) {
          this.damage=w.damage;
          this.health=w.health;
          this.squadName=w.squadName;
-         this.wariorName=w.wariorName;
+         this.warriorName=w.warriorName;
      }
+     
     
 }

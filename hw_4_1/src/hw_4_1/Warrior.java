@@ -5,19 +5,17 @@
  */
 package hw_4_1;
 
-
-
 /**
  *
  * @author kate_
  */
-public class Warrior implements WarriorInterface{ //если уж на то пошло, надо было сделать класс абстрактным и избавиться от интерфейса - в такой реализации от него нет толка
+public class Warrior implements WarriorInterface { //если уж на то пошло, надо было сделать класс абстрактным и избавиться от интерфейса - в такой реализации от него нет толка
 
-    protected int health; 
+    protected int health;
     protected int damage;
     protected String squadName;
-    protected String wariorName;
-    
+    protected String warriorName;
+  
     @Override
     public int attack() {
         return damage;
@@ -40,8 +38,8 @@ public class Warrior implements WarriorInterface{ //если уж на то по
 
     @Override
     public String toString() {
-        String str = "Имя: " + this.wariorName + ", " + this.squadName + ", " 
-                +"здоровье "+this.health+", урон "+this.damage;
+        String str = "Имя: " + this.warriorName + ", " + this.squadName + ", "
+                + "здоровье " + this.health + ", урон " + this.damage;
         return str;
-    }   
+    }    
 }
