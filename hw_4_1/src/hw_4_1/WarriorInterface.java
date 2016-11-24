@@ -9,7 +9,7 @@ package hw_4_1;
  *
  * @author kate_
  */
-public interface WarriorInterface {   
+public interface WarriorInterface {
     int attack();
     void takeDamage(int damage);
     boolean isAlive();
